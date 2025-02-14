@@ -26,6 +26,10 @@ $base: 16;
 
 .employment {
   padding-bottom: 100px;
+
+  @include respond(phone){
+    padding-bottom: 20px;
+  }
 }
 
 .wrapper {
@@ -56,7 +60,7 @@ $base: 16;
 
   @include respond(tablet) {
     font-size: px-to-rem(10);
-  }
+  } 
 }
 
 .item {

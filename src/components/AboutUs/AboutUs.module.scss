@@ -1,0 +1,134 @@
+@use "sass:math";
+$base: 16;
+@function px-to-rem($px) {
+  @return math.div($px, $base) * 1rem;
+}
+
+@mixin respond($breakpoint) {
+  @if $breakpoint == phone {
+    @media only screen and (max-width: px-to-rem(768)) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == tablet {
+    @media only screen and (max-width: px-to-rem(1024)) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == desktop {
+    @media only screen and (max-width: px-to-rem(1440)) {
+      @content;
+    }
+  }
+}
+
+.aboutus {
+  padding: px-to-rem(100) 0 px-to-rem(157);
+  background-image: url("../../assets/bg_about_us.svg");
+  background-position: left top 170px;
+  background-repeat: no-repeat;
+  background-size: 50%;
+
+  @include respond(desktop) {
+    background-position: left top 300px;
+  }
+
+  @include respond(phone) {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.644), rgba(0, 0, 0, 0.5)),
+      url("../../assets/bg_about_us.svg");
+    background-position: left top 50px;
+    background-size: 95%;
+    padding: px-to-rem(30) 0 px-to-rem(50);
+  }
+}
+
+.imageContainer {
+  position: relative;
+  width: 10px;
+  height: 10px;
+}
+
+.title {
+  font-weight: 700;
+  font-size: px-to-rem(11);
+  line-height: 100%;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+  text-align: center;
+
+  @include respond(tablet) {
+    font-size: px-to-rem(10);
+  }
+}
+
+.info {
+  max-width: 757px;
+  font-weight: 300;
+  font-size: px-to-rem(40);
+  line-height: 120%;
+  text-align: center;
+  margin-top: 28px;
+
+  @include respond(tablet) {
+    font-size: px-to-rem(24);
+  }
+
+  @include respond(phone) {
+    font-size: px-to-rem(18);
+  }
+}
+
+.wrapper {
+  display: flex;
+  justify-content: end;
+}
+
+.textWrapper {
+  margin-top: 75px;
+  max-width: 570px;
+  display: flex;
+  flex-direction: column;
+  gap: px-to-rem(16);
+
+  @include respond(desktop) {
+    max-width: 40vw;
+  }
+
+  @include respond(tablet) {
+    margin-top: 40px;
+    gap: px-to-rem(10);
+    max-width: 45vw;
+  }
+
+  @include respond(phone) {
+    max-width: 100%;
+    text-align: center;
+    margin-top: 20px;
+    gap: px-to-rem(12);
+  }
+}
+.wrapperTitle {
+  font-weight: 700;
+  font-size: px-to-rem(20);
+  max-width: 430px;
+  @include respond(tablet) {
+    font-size: px-to-rem(19);
+  }
+  @include respond(phone) {
+    font-size: px-to-rem(19);
+    max-width: 100%;
+  }
+}
+
+.wrapperInfo {
+  font-size: px-to-rem(20);
+  @include respond(tablet) {
+    font-size: px-to-rem(16);
+  }
+
+  @include respond(phone) {
+    font-size: px-to-rem(13);
+  }
+}
