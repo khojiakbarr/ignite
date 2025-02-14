@@ -1,0 +1,75 @@
+@use "sass:math";
+$base: 16;
+@function px-to-rem($px) {
+  @return math.div($px, $base) * 1rem;
+}
+
+@mixin respond($breakpoint) {
+  @if $breakpoint == phone {
+    @media only screen and (max-width: px-to-rem(768)) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == tablet {
+    @media only screen and (max-width: px-to-rem(1024)) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == desktop {
+    @media only screen and (max-width: px-to-rem(1440)) {
+      @content;
+    }
+  }
+}
+
+.employment {
+  padding-bottom: 100px;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: px-to-rem(25);
+
+  @include respond(tablet) {
+    gap: px-to-rem(10);
+  }
+}
+
+.imageContainer {
+  position: relative;
+  width: 10px;
+  height: 10px;
+}
+
+.title {
+  font-weight: 700;
+  font-size: px-to-rem(11);
+  line-height: 100%;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+  text-align: center;
+
+  @include respond(tablet) {
+    font-size: px-to-rem(10);
+  }
+}
+
+.item {
+  font-weight: 300;
+  font-size: 36px;
+  line-height: 133%;
+  text-align: center;
+
+  @include respond(tablet) {
+    font-size: px-to-rem(24);
+  }
+
+  @include respond(phone) {
+    font-size: px-to-rem(18);
+  }
+}

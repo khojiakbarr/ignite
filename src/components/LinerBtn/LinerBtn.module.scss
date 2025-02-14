@@ -1,0 +1,72 @@
+@use "sass:math";
+$base: 16;
+@function px-to-rem($px) {
+  @return math.div($px, $base) * 1rem;
+}
+
+@mixin respond($breakpoint) {
+  @if $breakpoint == phone {
+    @media only screen and (max-width: px-to-rem(768)) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == tablet {
+    @media only screen and (max-width: px-to-rem(1024)) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == desktop {
+    @media only screen and (max-width: px-to-rem(1440)) {
+      @content;
+    }
+  }
+}
+
+.btn {
+  padding: 15px 40px;
+  background: linear-gradient(57deg, #b80bc2 0%, #0074e1 50%, #68b5fd 100%);
+  background-size: 300% 300%;
+  border-radius: px-to-rem(50);
+  color: white;
+  font-size: px-to-rem(12);
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  transition: all 0.4s ease-in-out, box-shadow 0.4s ease;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  position: relative;
+  overflow: hidden;
+  @include respond(tablet) {
+    padding: 10px 25px;
+    font-size: px-to-rem(12);
+  }
+}
+
+.container {
+  position: relative;
+  display: inline-block;
+  background: linear-gradient(57deg, #b80bc2 0%, #0074e1 50%, #68b5fd 100%);
+  border-radius: px-to-rem(50);
+  transition: all 0.4s ease;
+}
+
+.container::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  border-radius: px-to-rem(50);
+  z-index: -10;
+  filter: blur(0);
+  transition: all 0.4s ease;
+}
+
+.container:hover::before {
+  background: linear-gradient(57deg, #b80bc2 0%, #0074e1 50%, #68b5fd 100%);
+  filter: blur(1.2em);
+}
+.container:active::before {
+  filter: blur(0.2em);
+}

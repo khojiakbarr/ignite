@@ -1,0 +1,91 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --text--color: #fff;
+  --info-color: rgba(255, 255, 255, 0.75);
+  --bg-color: #05031b;
+  --sidebar-color: #c4c4c41c;
+}
+
+.container {
+  max-width: 1230px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text--color);
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track-piece {
+  background-color: var(--bg-color);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #cbcbcb;
+  outline: 2px solid var(--bg-color);
+  outline-offset: -2px;
+  border: 0.1px solid #b7b7b7;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #909090;
+}
+
+.menu {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  display: none;
+  padding: 0;
+
+  @media (max-width: 767px) {
+    display: flex;
+  }
+}
+
+.line {
+  fill: none;
+  stroke: #777e90;
+  stroke-width: 6;
+  transition: stroke-dasharray 800ms cubic-bezier(0.4, 0, 0.2, 1),
+    stroke-dashoffset 800ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.line1 {
+  stroke-linecap: round;
+  stroke-dasharray: 60 207;
+  stroke-width: 6;
+}
+.line2 {
+  stroke-linecap: round;
+  stroke-dasharray: 60 60;
+  stroke-width: 6;
+}
+.line3 {
+  stroke-linecap: round;
+  stroke-dasharray: 60 207;
+  stroke-width: 6;
+}
+.opened .line1 {
+  stroke-dasharray: 90 207;
+  stroke-dashoffset: -134;
+  stroke-width: 6;
+}
+.opened .line2 {
+  stroke-dasharray: 1 60;
+  stroke-dashoffset: -30;
+  stroke-width: 6;
+}
+.opened .line3 {
+  stroke-dasharray: 90 207;
+  stroke-dashoffset: -134;
+  stroke-width: 6;
+}

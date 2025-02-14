@@ -1,0 +1,79 @@
+@use "sass:math";
+$base: 16;
+@function px-to-rem($px) {
+  @return math.div($px, $base) * 1rem;
+}
+
+@mixin respond($breakpoint) {
+  @if $breakpoint == phone {
+    @media only screen and (max-width: px-to-rem(768)) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == tablet {
+    @media only screen and (max-width: px-to-rem(1024)) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == desktop {
+    @media only screen and (max-width: px-to-rem(1440)) {
+      @content;
+    }
+  }
+}
+
+.hero {
+  min-height: 100vh;
+  background-image: url("../../assets/bg_hero.png");
+  background-size: 100% 120%;
+  background-repeat: no-repeat;
+
+  @include respond(tablet) {
+    background-size: 130% 140%;
+  }
+
+  @include respond(phone) {
+    background-size: 100% 100%;
+    background-position: center top 72px;
+    min-height: 50vh;
+  }
+}
+
+.wrapper {
+  width: 100%;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+
+  @include respond(tablet) {
+    height: 80vh;
+  }
+
+  @include respond(phone) {
+    height: 50vh;
+  }
+}
+
+.title {
+  font-weight: 400;
+  font-size: 86px;
+  line-height: 105%;
+
+  @include respond(phone) {
+    font-size: 44px;
+  }
+}
+
+.description {
+  font-weight: 400;
+  font-size: 20px;
+  margin: px-to-rem(15) 0 px-to-rem(18);
+  @include respond(phone) {
+    font-size: 10px;
+    margin: px-to-rem(8) 0 px-to-rem(10);
+  }
+}
