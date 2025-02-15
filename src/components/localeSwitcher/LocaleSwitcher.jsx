@@ -75,6 +75,7 @@ const LocaleSwitcher = () => {
                     alt="uz"
                     width={24}
                     height={20}
+                    loading="lazy"
                   />
                 </div>
               )}
@@ -86,6 +87,7 @@ const LocaleSwitcher = () => {
                     alt="ru"
                     width={24}
                     height={20}
+                    loading="lazy"
                   />
                 </div>
               )}
@@ -97,6 +99,7 @@ const LocaleSwitcher = () => {
                     alt="en"
                     width={24}
                     height={20}
+                    loading="lazy"
                   />
                 </div>
               )}

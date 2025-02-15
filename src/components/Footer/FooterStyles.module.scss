@@ -1,0 +1,131 @@
+@use "sass:math";
+$base: 16;
+@function px-to-rem($px) {
+  @return math.div($px, $base) * 1rem;
+}
+
+@mixin respond($breakpoint) {
+  @if $breakpoint == phone {
+    @media only screen and (max-width: px-to-rem(768)) {
+      @content;
+    }
+  }
+  @if $breakpoint == min-phone {
+    @media only screen and (max-width: px-to-rem(460)) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == tablet {
+    @media only screen and (max-width: px-to-rem(1024)) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == desktop {
+    @media only screen and (max-width: px-to-rem(1440)) {
+      @content;
+    }
+  }
+}
+
+.footer {
+  padding: px-to-rem(155) 0 0 0;
+  background-image: url("../../assets/bg_footer.png");
+  background-size: contain;
+  background-position: left bottom;
+  background-repeat: no-repeat;
+  background-size: 100%;
+
+  @include respond(phone) {
+    padding: 48px 0 0 0;
+  }
+}
+
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+
+  @include respond(phone) {
+    flex-direction: column;
+    gap: 15px;
+  }
+}
+
+.leftSide {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 25px;
+  @include respond(phone) {
+    gap: 14px;
+  }
+}
+
+.rightSide {
+  @include respond(phone) {
+    display: none;
+  }
+}
+
+.logoContainer {
+  position: relative;
+  width: 145px;
+  height: 57px;
+}
+
+.title {
+  font-weight: 300;
+  font-size: 34px;
+
+  @include respond(phone) {
+    font-size: 20px;
+  }
+}
+
+.centerTitle {
+  color: rgba(255, 255, 255, 0.25);
+  font-weight: 700;
+  font-size: 11px;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+}
+.telContainer {
+  @include respond(phone) {
+    margin-top: 24px;
+  }
+}
+
+.tel {
+  margin-top: 4px;
+  font-weight: 400;
+  font-size: 20px;
+}
+
+.centerList {
+  font-weight: 400;
+  font-size: 20px;
+  text-transform: capitalize;
+
+  @include respond(phone) {
+    font-size: 18px;
+    display: flex;
+    gap: 10px;
+    margin-top: 24px;
+  }
+}
+
+.footerLine {
+  margin-top: 80px;
+  padding: 50px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.25);
+  color: rgba(255, 255, 255, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  @include respond(phone) {
+    margin-top: 20px;
+    padding: 20px 0;
+  }
+}

@@ -7,5 +7,55 @@
     "contacts": "контакты",
     "clients": "Клиенты",
     "commercial": "коммерческое предложение"
-  }
+  },
+  "cards": [
+    {
+      "stroke": "#1E6DF0",
+      "imageUrl": "/bg_card_reklama.png",
+      "title": "Таргетированная реклама",
+      "description": "Привлечение клиентов через Instagram и Facebook"
+    },
+    {
+      "stroke": "#F98DFF",
+      "imageUrl": "/bg_card_botov.png",
+      "title": "Разработка чат ботов",
+      "description": "Создание воронки продаж или информационного канала в Telegram и Whatsapp"
+    },
+    {
+      "stroke": "#65FF6A",
+      "imageUrl": "/bg_card_marketing.png",
+      "title": "Комплексный маркетинг",
+      "description": "Комбинацию любых видов услуг, которые нужны вашему бизнесу для увеличения продаж и роста прибыли"
+    },
+    {
+      "stroke": "#FF53A3",
+      "imageUrl": "/bg_card_magazin.png",
+      "title": "Сайт или интерент-магазин",
+      "description": "Создание любого вида сайта для ваших товаров и услуг; многостраничный сайт, лендинг,интернет магазин "
+    },
+    {
+      "stroke": "#FF924E",
+      "imageUrl": "/bg_card_SMM.png",
+      "title": "SMM продвижение",
+      "description": "Упаковка, продвижение ваших товаров или услуг в Instagram, Facebook, VK, LinkedIn"
+    },
+    {
+      "stroke": "#FFD900",
+      "imageUrl": "/bg_card_reklama_2.png",
+      "title": "Контекстная реклама",
+      "description": "Настройка реклама в Google и Яндекс, которая поможет увеличить поток клиентов"
+    },
+    {
+      "stroke": "#E41502",
+      "imageUrl": "/bg_SEO.png",
+      "title": "SEO продвижение",
+      "description": "Органическое продвижение в Google и Яндекс без затрат на рекламный бюджет"
+    },
+    {
+      "stroke": "#00FFCC",
+      "imageUrl": "/bg_business.png",
+      "title": "Автоматизация бизнес процессов",
+      "description": "Построение независимого процесса продаж, где нужно следить за товаром или клиентом"
+    }
+  ]
 }

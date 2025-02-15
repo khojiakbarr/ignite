@@ -1,0 +1,30 @@
+.scrollContainer {
+  width: 100%;
+  overflow-x: scroll;
+  white-space: nowrap;
+  display: flex;
+  scrollbar-width: none; // Firefox uchun
+  transition: all 0.4s ease;
+  -ms-overflow-style: none; // Internet Explorer uchun
+
+  &::-webkit-scrollbar {
+    display: none; // Chrome va Safari uchun
+  }
+}
+
+.cardWrapper {
+  display: flex;
+  gap: 10px;
+}
+
+.card {
+  min-width: 200px;
+  height: 150px;
+  background: linear-gradient(45deg, #ff7b54, #ff3f34);
+  color: white;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+}

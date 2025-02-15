@@ -9,7 +9,7 @@ const Employment = () => {
         <div className={styles.wrapper}>
           <div className="flex justify-center items-center gap-2 mb-5">
             <div className={styles.imageContainer}>
-              <Image src={bottomIcon} fill alt="icon_bottom" />
+              <Image src={bottomIcon} fill alt="icon_bottom" loading="lazy" />
             </div>
             <h2 className={styles.title}>чем мы занимаемся</h2>
           </div>

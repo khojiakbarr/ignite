@@ -9,7 +9,7 @@ const AboutUs = () => {
       <div className="container">
         <div className="flex justify-center items-center gap-2 mb-5 max-md:mb-0">
           <div className={styles.imageContainer}>
-            <Image src={bottomIcon} fill alt="icon_bottom" />
+            <Image src={bottomIcon} fill alt="icon_bottom" loading="lazy" />
           </div>
           <h3 className={styles.title}>о нас</h3>
         </div>

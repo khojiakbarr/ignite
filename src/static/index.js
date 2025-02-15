@@ -7,8 +7,13 @@ import reklama_2 from "../assets/bg_card_reklama_2";
 import SEO from "../assets/bg_SEO";
 import business from "../assets/bg_business";
 
-export const cardImages = [
-  reklama,
+export const cardInfo = [
+  {
+    stroke: "#1E6DF0",
+    image: reklama,
+    title: "title",
+    description: "description",
+  },
   botov,
   marketing,
   magazine,
