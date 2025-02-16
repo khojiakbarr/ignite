@@ -3,8 +3,8 @@ import Employment from "@/components/Employment/Employment";
 import Footer from "@/components/Footer/Footer";
 import Header from "@/components/Header/Header";
 import Hero from "@/components/Hero/Hero";
-import HorizontalScroll from "@/components/HorizontalScroll/HorizontalScroll";
 import Solutions from "@/components/Solutions/Solutions";
+import Trust from "@/components/Trust/Trust";
 
 export default function Home() {
   return (
@@ -14,7 +14,7 @@ export default function Home() {
       <Employment />
       <AboutUs />
       <Solutions />
-      {/* <HorizontalScroll /> */}
+      <Trust />
       <Footer />
     </main>
   );

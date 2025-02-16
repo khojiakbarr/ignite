@@ -1,0 +1,112 @@
+@use "sass:math";
+$base: 16;
+@function px-to-rem($px) {
+  @return math.div($px, $base) * 1rem;
+}
+
+@mixin respond($breakpoint) {
+  @if $breakpoint == phone {
+    @media only screen and (max-width: px-to-rem(768)) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == tablet {
+    @media only screen and (max-width: px-to-rem(1024)) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == desktop {
+    @media only screen and (max-width: px-to-rem(1440)) {
+      @content;
+    }
+  }
+}
+
+.imageContainer {
+  overflow: hidden;
+  @include respond(tablet) {
+    transform: scale(0.8);
+  }
+}
+
+.trust {
+  background-color: white;
+  padding-bottom: 90px;
+  @include respond(phone) {
+    padding-bottom: 40px;
+  }
+}
+
+.card {
+  position: relative;
+  min-width: 200px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #05031b;
+  border-radius: 16px;
+  padding: 15px;
+
+  @include respond(tablet) {
+    min-width: 150px;
+    padding: 10px;
+    height: 80px;
+  }
+
+  @include respond(phone) {
+    min-width: 0;
+    width: 100%;
+  }
+}
+
+.titleContainer {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 45px 0 90px 0;
+
+  @include respond(phone) {
+    padding: 40px 0 40px 0;
+  }
+}
+
+.title {
+  font-weight: 700;
+  font-size: 11px;
+  line-height: 125%;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+  text-align: center;
+  color: #262831;
+  text-wrap: nowrap;
+}
+
+.line {
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: #f0f0f0;
+}
+
+.cardWrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 50px;
+
+  @include respond(desktop) {
+    gap: 40px;
+  }
+
+  @include respond(tablet) {
+    gap: 15px;
+  }
+
+  @include respond(phone) {
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    justify-items: center;
+  }
+}

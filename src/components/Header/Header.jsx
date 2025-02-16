@@ -1,7 +1,7 @@
 "use client";
 
 import { Link } from "@/i18n/routing";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
 import styles from "./Header.module.scss";
@@ -26,8 +26,10 @@ const Header = () => {
     setIsMenu(!isMenu);
   };
 
+
+
   return (
-    <header className={styles.header}>
+    <header className={styles.header} >
       <div className="container">
         <nav className={styles.navItems}>
           <Link href="/" className={styles.logo}>

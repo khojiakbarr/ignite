@@ -3,6 +3,7 @@ import { getMessages, setRequestLocale } from "next-intl/server";
 import { routing } from "@/i18n/routing";
 import { NextIntlClientProvider } from "next-intl";
 import "../globals.css";
+import LocomotiveScrollProvider from "@/providers/Locomotivescroll";
 
 const montserrat = localFont({
   src: "../../../public/fonts/Montserrat-VariableFont_wght.ttf",
@@ -31,7 +32,7 @@ export default async function RootLayout({ children, params }) {
     <html lang="en">
       <NextIntlClientProvider locale={locale} messages={messages}>
         <body className={`${montserrat.className} antialiased`}>
-          {children}
+          <LocomotiveScrollProvider>{children}</LocomotiveScrollProvider>
         </body>
       </NextIntlClientProvider>
     </html>
