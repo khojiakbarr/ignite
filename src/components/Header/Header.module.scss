@@ -31,12 +31,6 @@ $base: 16;
   background-color: var(--bg-color);
   padding: px-to-rem(15) 0;
   z-index: 999;
-
-  // position: absolute;
-  // top: 0;
-  // left: 0;
-  // width: 100%;
-  // transform: translateY(var(--scroll-y, 0px));
 }
 
 .logo {
@@ -64,7 +58,10 @@ $base: 16;
   gap: px-to-rem(15);
 }
 
-.nvListItems {
+.navListItems {
+  font-weight: 700;
+  font-size: px-to-rem(12);
+  line-height: 120%;
   display: flex;
   list-style: none;
   margin: 0;
@@ -72,6 +69,7 @@ $base: 16;
   justify-content: center;
   align-items: center;
   gap: px-to-rem(25);
+  text-transform: uppercase;
   & > li {
     transition: all 0.4s ease;
     &:hover {
@@ -86,13 +84,12 @@ $base: 16;
 
 .actions {
   display: flex;
-  gap: px-to-rem(25);
+  gap: px-to-rem(10);
   align-items: center;
   @include respond(tablet) {
-    gap: px-to-rem(10);
   }
 
-  @include respond(phone) {
+  @include respond(tablet) {
     display: none;
   }
 }
@@ -105,7 +102,7 @@ $base: 16;
 }
 
 .desctopList {
-  @include respond(phone) {
+  @include respond(tablet) {
     display: none;
   }
 }
@@ -124,7 +121,7 @@ $base: 16;
 }
 
 .listContainer {
-  padding: px-to-rem(100) px-to-rem(20);
+  padding: px-to-rem(100) 0 0;
   display: flex;
   flex-direction: column;
   gap: px-to-rem(15);
@@ -134,5 +131,15 @@ $base: 16;
     &:hover {
       color: var(--info-color);
     }
+  }
+}
+
+.mobileActions {
+  display: none;
+
+  @include respond(tablet) {
+    display: flex;
+    gap: px-to-rem(10);
+    align-items: center;
   }
 }

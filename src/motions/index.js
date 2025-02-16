@@ -17,3 +17,15 @@ export const buttonVariants = {
   visible: { opacity: 1, scale: 1, transition: { duration: 0.3, delay: 1.3 } }, // Delay qo‘shdik
   exit: { opacity: 0, scale: 0.5, transition: { duration: 0.3 } },
 };
+
+export const modalVariants = {
+  hidden: { opacity: 0 },
+  visible: { opacity: 1, transition: { duration: 0.5 } },
+  exit: { opacity: 0, transition: { duration: 0.5 } },
+};
+
+export const modalContentVariants = {
+  hidden: { opacity: 0, scale: 0 },
+  visible: { opacity: 1, scale: 1, transition: { duration: 1 } },
+  exit: { opacity: 0, scale: 0, transition: { duration: 1 } },
+};

@@ -4,7 +4,11 @@ import { Link } from "@/i18n/routing";
 import Image from "next/image";
 import logo from "../../assets/logo.svg";
 import LinerBtn from "../LinerBtn/LinerBtn";
+import { useTranslations } from "next-intl";
 const Footer = () => {
+  const t = useTranslations("footer");
+  const lists = t.raw("lists");
+
   return (
     <section className={styles.footer}>
       <div className="container">
@@ -15,10 +19,13 @@ const Footer = () => {
                 <Image src={logo} fill loading="lazy" alt="logo" />
               </div>
             </Link>
-              <h6 className={styles.title}>
-                Перестань <span className="font-bold">мечтать</span>, <br />{" "}
-                начни <span className="font-bold">действовать</span>
-              </h6>
+            <h6 className={styles.title}>
+              {t.rich("title", {
+                span: (chunks) => <span className="font-bold">{chunks}</span>,
+              })}
+              {/* Перестань <span className="font-bold">мечтать</span>, <br /> начни{" "}
+              <span className="font-bold">действовать</span> */}
+            </h6>
             <LinerBtn>Коммерческое предложение</LinerBtn>
           </div>
           <div className={styles.center}>
@@ -45,15 +52,11 @@ const Footer = () => {
           </div>
           <div className={styles.rightSide}>
             <ul className={styles.centerList}>
-              <li className="">
-                <Link href={"#"}>О нас</Link>
-              </li>
-              <li className="">
-                <Link href={"#"}>решения</Link>
-              </li>
-              <li className="">
-                <Link href={"#"}>Клиенты</Link>
-              </li>
+              {lists.map((item, i) => (
+                <li key={i}>
+                  <Link href={`#${item.id}`}>{item.text}</Link>
+                </li>
+              ))}
             </ul>
           </div>
         </div>

@@ -1,63 +1,87 @@
 {
   "header": {
-    "aboutus": "о нас",
-    "solutions": "решения",
-    "projects": "Проекты",
-    "home": "главная",
-    "contacts": "контакты",
-    "clients": "Клиенты",
+    "items": [
+      { "id": "about", "text": "о нас" },
+      { "id": "solutions", "text": "решения" },
+      { "id": "trust", "text": "Клиенты" },
+      { "id": null, "text": "контакты" }
+    ],
+    "contact": "контакты",
     "commercial": "коммерческое предложение"
   },
-  "cards": [
-    {
-      "stroke": "#1E6DF0",
-      "imageUrl": "/bg_card_reklama.png",
-      "title": "Таргетированная реклама",
-      "description": "Привлечение клиентов через Instagram и Facebook"
-    },
-    {
-      "stroke": "#F98DFF",
-      "imageUrl": "/bg_card_botov.png",
-      "title": "Разработка чат ботов",
-      "description": "Создание воронки продаж или информационного канала в Telegram и Whatsapp"
-    },
-    {
-      "stroke": "#65FF6A",
-      "imageUrl": "/bg_card_marketing.png",
-      "title": "Комплексный маркетинг",
-      "description": "Комбинацию любых видов услуг, которые нужны вашему бизнесу для увеличения продаж и роста прибыли"
-    },
-    {
-      "stroke": "#FF53A3",
-      "imageUrl": "/bg_card_magazin.png",
-      "title": "Сайт или интерент-магазин",
-      "description": "Создание любого вида сайта для ваших товаров и услуг; многостраничный сайт, лендинг,интернет магазин "
-    },
-    {
-      "stroke": "#FF924E",
-      "imageUrl": "/bg_card_SMM.png",
-      "title": "SMM продвижение",
-      "description": "Упаковка, продвижение ваших товаров или услуг в Instagram, Facebook, VK, LinkedIn"
-    },
-    {
-      "stroke": "#FFD900",
-      "imageUrl": "/bg_card_reklama_2.png",
-      "title": "Контекстная реклама",
-      "description": "Настройка реклама в Google и Яндекс, которая поможет увеличить поток клиентов"
-    },
-    {
-      "stroke": "#E41502",
-      "imageUrl": "/bg_SEO.png",
-      "title": "SEO продвижение",
-      "description": "Органическое продвижение в Google и Яндекс без затрат на рекламный бюджет"
-    },
-    {
-      "stroke": "#00FFCC",
-      "imageUrl": "/bg_business.png",
-      "title": "Автоматизация бизнес процессов",
-      "description": "Построение независимого процесса продаж, где нужно следить за товаром или клиентом"
-    }
-  ],
+
+  "hero": {
+    "title": "<strong>Границы?</strong>\nМы их\n<strong>стираем</strong>",
+    "info": "Ignite – рекламное агентство полного цикла",
+    "btn": "оставить заявку"
+  },
+  "employment": {
+    "title": "чем мы занимаемся",
+    "info": "Преобразуем сложные маркетинговые технологии",
+    "item": "в <span>бизнес-решения, которые экономят ваше время, деньги и избавляют от стресса</span>"
+  },
+  "about": {
+    "title": "о нас",
+    "info": "Кто мы и как <span>воплощаем</span>\n  ваши идеи\n <span>в реальность </span> ",
+    "wrapperTitle": "Ignite Media — ваш надежный партнёр в развитии бизнеса!",
+    "wrapperInfo": "Мы предоставляем профессиональные решения для всех направлений B2B, помогая компаниям достигать своих целей и эффективно развиваться. Наш опыт охватывает широкий спектр отраслей, включая сотрудничество с государственным сектором.",
+    "wrapperInfo_2": "  Мы готовы стать вашим проводником в реализации масштабных проектов, оптимизации процессов и создании инновационных решений. С нами Вы станете сильнее, а ваши результаты - стабильнее!"
+  },
+  "solutons": {
+    "title": "решения",
+    "info": "От стратегии до реализации ваших идей",
+    "cards": [
+      {
+        "stroke": "#1E6DF0",
+        "imageUrl": "/bg_card_reklama.png",
+        "title": "Таргетированная реклама",
+        "description": "Привлечение клиентов через Instagram и Facebook"
+      },
+      {
+        "stroke": "#F98DFF",
+        "imageUrl": "/bg_card_botov.png",
+        "title": "Разработка чат ботов",
+        "description": "Создание воронки продаж или информационного канала в Telegram и Whatsapp"
+      },
+      {
+        "stroke": "#65FF6A",
+        "imageUrl": "/bg_card_marketing.png",
+        "title": "Комплексный маркетинг",
+        "description": "Комбинацию любых видов услуг, которые нужны вашему бизнесу для увеличения продаж и роста прибыли"
+      },
+      {
+        "stroke": "#FF53A3",
+        "imageUrl": "/bg_card_magazin.png",
+        "title": "Сайт или интерент-магазин",
+        "description": "Создание любого вида сайта для ваших товаров и услуг; многостраничный сайт, лендинг,интернет магазин "
+      },
+      {
+        "stroke": "#FF924E",
+        "imageUrl": "/bg_card_SMM.png",
+        "title": "SMM продвижение",
+        "description": "Упаковка, продвижение ваших товаров или услуг в Instagram, Facebook, VK, LinkedIn"
+      },
+      {
+        "stroke": "#FFD900",
+        "imageUrl": "/bg_card_reklama_2.png",
+        "title": "Контекстная реклама",
+        "description": "Настройка реклама в Google и Яндекс, которая поможет увеличить поток клиентов"
+      },
+      {
+        "stroke": "#E41502",
+        "imageUrl": "/bg_SEO.png",
+        "title": "SEO продвижение",
+        "description": "Органическое продвижение в Google и Яндекс без затрат на рекламный бюджет"
+      },
+      {
+        "stroke": "#00FFCC",
+        "imageUrl": "/bg_business.png",
+        "title": "Автоматизация бизнес процессов",
+        "description": "Построение независимого процесса продаж, где нужно следить за товаром или клиентом"
+      }
+    ]
+  },
+
   "trust": {
     "title": "нам доверяют",
     "trustCards": [
@@ -77,6 +101,55 @@
       "/brend_icons/realme.png",
       "/brend_icons/minestersva.png",
       "/brend_icons/menerstersva_1.png"
+    ]
+  },
+
+  "footer": {
+    "title": "Перестань <span>мечтать</span> начни <span>действовать</span>",
+    "lists": [
+      { "id": "about", "text": "о нас" },
+      { "id": "solutions", "text": "решения" },
+      { "id": "trust", "text": "Клиенты" }
+    ]
+  },
+
+  "popup": {
+    "title": "Заполните форму",
+    "name": "имя",
+    "phone": "телефон",
+    "submit": "отправить",
+    "send_message": [
+      { "id": 0, "letter": "О" },
+      { "id": 1, "letter": "т" },
+      { "id": 2, "letter": "п" },
+      { "id": 3, "letter": "р" },
+      { "id": 4, "letter": "а" },
+      { "id": 5, "letter": "в" },
+      { "id": 6, "letter": "и" },
+      { "id": 7, "letter": "т" },
+      { "id": 8, "letter": "ь" },
+      { "id": 9, "letter": "&nbsp;" },
+      { "id": 10, "letter": "с" },
+      { "id": 11, "letter": "о" },
+      { "id": 12, "letter": "о" },
+      { "id": 13, "letter": "б" },
+      { "id": 14, "letter": "щ" },
+      { "id": 15, "letter": "е" },
+      { "id": 16, "letter": "н" },
+      { "id": 17, "letter": "и" },
+      { "id": 18, "letter": "е" }
+    ],
+    "sent": [
+      { "id": 0, "letter": "о" },
+      { "id": 1, "letter": "т" },
+      { "id": 2, "letter": "п" },
+      { "id": 3, "letter": "р" },
+      { "id": 4, "letter": "а" },
+      { "id": 5, "letter": "в" },
+      { "id": 6, "letter": "л" },
+      { "id": 7, "letter": "е" },
+      { "id": 8, "letter": "н" },
+      { "id": 9, "letter": "о" }
     ]
   }
 }

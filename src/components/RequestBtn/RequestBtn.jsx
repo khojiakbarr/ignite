@@ -1,9 +1,9 @@
 import React from "react";
 import styles from "./Request.module.scss";
-const RequestBtn = ({ children }, props) => {
+const RequestBtn = (props) => {
   return (
     <button className={styles.cssbuttonsIoButton} {...props}>
-      {children}
+      {props.children}
       <div className={styles.icon}>
         <svg
           height="24"
@@ -19,9 +19,6 @@ const RequestBtn = ({ children }, props) => {
         </svg>
       </div>
     </button>
-    // <button {...props} className={styles.btn}>
-    //   {children}
-    // </button>
   );
 };
 

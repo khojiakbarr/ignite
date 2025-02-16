@@ -1,12 +1,7 @@
 "use client";
 
-// import dynamic from "next/dynamic";
 import React, { useEffect, useRef } from "react";
 import "locomotive-scroll/dist/locomotive-scroll.css";
-
-// const LocomotiveScroll = dynamic(() => import("locomotive-scroll"), {
-//   ssr: false,
-// });
 
 function LocomotiveScrollProvider({ children }) {
   const scrollRef = useRef(null);

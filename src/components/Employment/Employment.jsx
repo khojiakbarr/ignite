@@ -2,7 +2,10 @@ import React from "react";
 import styles from "./Employment.module.scss";
 import Image from "next/image";
 import bottomIcon from "../../assets/icons/bottom_icon.svg";
+import { useTranslations } from "next-intl";
 const Employment = () => {
+  const t = useTranslations("employment");
+
   return (
     <section className={styles.employment}>
       <div className="container">
@@ -11,17 +14,27 @@ const Employment = () => {
             <div className={styles.imageContainer}>
               <Image src={bottomIcon} fill alt="icon_bottom" loading="lazy" />
             </div>
-            <h2 className={styles.title}>чем мы занимаемся</h2>
+            <h2 className={styles.title}>{t("title")}</h2>
           </div>
-          <p className={styles.item}>
-            Преобразуем сложные маркетинговые технологии
+          <p
+            className={styles.item}
+            data-scroll
+            data-scroll-direction="vertical"
+            data-scroll-speed="-0.3"
+            data-scroll-position="top"
+          >
+            {t("info")}
           </p>
-          <p className={styles.item}>
-            в{" "}
-            <span className="font-bold">
-              бизнес-решения, которые экономят ваше время, деньги и избавляют от
-              стресса
-            </span>
+          <p
+            className={styles.item}
+            data-scroll
+            data-scroll-direction="vertical"
+            data-scroll-speed="-0.4"
+            data-scroll-position="top"
+          >
+            {t.rich("item", {
+              span: (chunks) => <span className="font-bold">{chunks}</span>,
+            })}
           </p>
         </div>
       </div>

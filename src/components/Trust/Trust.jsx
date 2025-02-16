@@ -7,7 +7,7 @@ const Trust = () => {
   const t = useTranslations();
   const trust = t.raw("trust");
   return (
-    <section className={styles.trust}>
+    <section className={styles.trust} id="trust">
       <div className={styles.titleContainer}>
         <span className={styles.line}></span>
         <h5 className={styles.title}>{trust.title}</h5>

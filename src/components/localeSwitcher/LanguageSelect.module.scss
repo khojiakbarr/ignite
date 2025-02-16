@@ -29,27 +29,26 @@ $base: 16;
   width: 130px;
 
   @include respond(phone) {
-    width: 115px;
+    width: 120px;
   }
 }
 
 .selectButton {
   padding: 5px 10px 4px;
   width: 130px;
-  background-color: #fff;
-  border: 1px solid var(--brand-color);
+  background-color: var(--bg-color);
   cursor: pointer;
   display: flex;
   justify-content: space-between;
   align-items: center;
   transition: all 0.4s ease;
-  &:hover {
-    background-color: var(--brand-color);
-    color: #fff;
-  }
+  // &:hover {
+  //   background-color: var(--brand-color);
+  //   color: #fff;
+  // }
 
   @include respond(phone) {
-    width: 115px;
+    width: 120px;
     font-size: px-to-rem(13);
   }
 }
@@ -63,8 +62,7 @@ $base: 16;
   top: 100%;
   left: 0;
   right: 0;
-  background-color: #fff;
-  border: 1px solid #ccc;
+  background-color: var(--bg-color);
   border-top: none;
   border-radius: 0 0 4px 4px;
   list-style-type: none;
@@ -89,7 +87,7 @@ $base: 16;
   }
 }
 
-.option:hover {
-  background-color: var(--brand-color);
-  color: #fff;
-}
+// .option:hover {
+//   background-color: var(--brand-color);
+//   color: #fff;
+// }
