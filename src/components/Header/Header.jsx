@@ -12,14 +12,6 @@ import { buttonVariants, containerVariants, itemVariants } from "@/motions";
 import LocaleSwitcher from "../localeSwitcher/LocaleSwitcher";
 import Popup from "../Popup/Popup";
 
-export const navItems = ["aboutus", "reshenya", "project", "client"];
-export const navItemsMobile = [
-  "aboutus",
-  "reshenya",
-  "project",
-  "client",
-  "контакты",
-];
 const Header = () => {
   const [isOpenModal, setIsOpenModal] = useState(false);
   const [isMenu, setIsMenu] = useState(false);
@@ -46,38 +38,43 @@ const Header = () => {
     <header className={styles.header}>
       <div className="container">
         <nav className={styles.navItems}>
-          <Link
-            href="/"
-            className={styles.logo}
-            data-scroll
-            data-scroll-direction="horizontal"
-            data-scroll-speed="-2"
-            data-scroll-position="top"
-          >
-            <Image src={logo} fill alt="logo" loading="lazy" />
-          </Link>
-          <div className={styles.desctopList}>
-            <ul className={styles.navListItems}>
-              {items.map((item, i) => {
-                if (item.id) {
-                  return (
-                    <li key={i}>
-                      <Link href={`#${item.id}`}>{item.text}</Link>
-                    </li>
-                  );
-                } else {
-                  return (
-                    <li
-                      key={i}
-                      onClick={() => openModal(true)}
-                      className="cursor-pointer"
-                    >
-                      {item.text}
-                    </li>
-                  );
-                }
-              })}
-            </ul>
+          <div className="flex items-center gap-[35px]">
+            <Link
+              href="/"
+              className={styles.logo}
+              data-scroll
+              data-scroll-direction="horizontal"
+              data-scroll-speed="-2"
+              data-scroll-position="top"
+            >
+              <Image src={logo} fill alt="logo" loading="lazy" />
+            </Link>
+            <div className={styles.desctopList}>
+              <ul className={styles.navListItems}>
+                {items.map((item, i) => {
+                  if (item.id) {
+                    return (
+                      <li key={i}>
+                        <Link href={`#${item.id}`}>{item.text}</Link>
+                      </li>
+                    );
+                  } else {
+                    return (
+                      <li
+                        key={i}
+                        onClick={() => openModal(true)}
+                        className="cursor-pointer"
+                      >
+                        {item.text}
+                      </li>
+                    );
+                  }
+                })}
+              </ul>
+              <button className="uppercase" onClick={() => openModal(true)}>
+                {t("contact")}
+              </button>
+            </div>
           </div>
 
           <AnimatePresence>

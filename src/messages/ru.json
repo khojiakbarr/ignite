@@ -3,8 +3,7 @@
     "items": [
       { "id": "about", "text": "о нас" },
       { "id": "solutions", "text": "решения" },
-      { "id": "trust", "text": "Клиенты" },
-      { "id": null, "text": "контакты" }
+      { "id": "trust", "text": "Клиенты" }
     ],
     "contact": "контакты",
     "commercial": "коммерческое предложение"
@@ -118,38 +117,6 @@
     "name": "имя",
     "phone": "телефон",
     "submit": "отправить",
-    "send_message": [
-      { "id": 0, "letter": "О" },
-      { "id": 1, "letter": "т" },
-      { "id": 2, "letter": "п" },
-      { "id": 3, "letter": "р" },
-      { "id": 4, "letter": "а" },
-      { "id": 5, "letter": "в" },
-      { "id": 6, "letter": "и" },
-      { "id": 7, "letter": "т" },
-      { "id": 8, "letter": "ь" },
-      { "id": 9, "letter": "&nbsp;" },
-      { "id": 10, "letter": "с" },
-      { "id": 11, "letter": "о" },
-      { "id": 12, "letter": "о" },
-      { "id": 13, "letter": "б" },
-      { "id": 14, "letter": "щ" },
-      { "id": 15, "letter": "е" },
-      { "id": 16, "letter": "н" },
-      { "id": 17, "letter": "и" },
-      { "id": 18, "letter": "е" }
-    ],
-    "sent": [
-      { "id": 0, "letter": "о" },
-      { "id": 1, "letter": "т" },
-      { "id": 2, "letter": "п" },
-      { "id": 3, "letter": "р" },
-      { "id": 4, "letter": "а" },
-      { "id": 5, "letter": "в" },
-      { "id": 6, "letter": "л" },
-      { "id": 7, "letter": "е" },
-      { "id": 8, "letter": "н" },
-      { "id": 9, "letter": "о" }
-    ]
+    "send_message": "отправить сообщение"
   }
 }

@@ -24,69 +24,34 @@ $base: 16;
   }
 }
 
-// .btn {
-//   border-radius: px-to-rem(50);
-//   padding: px-to-rem(18);
-//   background-color: #fff;
-// }
-
-/* From Uiverse.io by adamgiebl */
-.cssbuttonsIoButton {
-  padding: px-to-rem(18);
-  background: white;
-  color: #05031b;
-  font-family: inherit;
-  padding-left: 1.2em;
-  font-size: 17px;
-  font-weight: 500;
-  border-radius: px-to-rem(50);
-  border: none;
-  letter-spacing: 0.05em;
+.btn {
   display: flex;
+  justify-content: center;
   align-items: center;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
-  overflow: hidden;
-  position: relative;
-  height: 2.8em;
-  padding-right: 3.3em;
-  cursor: pointer;
+  gap: px-to-rem(12);
+  font-weight: 700;
+  font-size: 12px;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+  border-radius: px-to-rem(50);
+  color: var(--bg-color);
+  padding: px-to-rem(18);
+  background-color: #fff;
+
+  @include respond(tablet) {
+    font-size: px-to-rem(14);
+    padding: px-to-rem(15);
+  }
 
   @include respond(phone) {
-    padding: px-to-rem(6) px-to-rem(16);
-    padding-right: 2.6em;
-    font-size: 12px;
+    font-size: px-to-rem(10);
+    padding: px-to-rem(10);
+    gap: px-to-rem(8);
   }
 }
 
-.cssbuttonsIoButton .icon {
-  background: white;
-  margin-left: 1em;
-  position: absolute;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 2.2em;
-  width: 2.2em;
-  border-radius: px-to-rem(50);
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
-  right: 0.3em;
-  transition: all 0.3s;
-}
-
-.cssbuttonsIoButton:hover .icon {
-  width: calc(100% - 0.6em);
-}
-
-.cssbuttonsIoButton .icon svg {
-  width: 1.1em;
-  transition: transform 0.3s;
-  color: #05031b;
-}
-
-.cssbuttonsIoButton:hover .icon svg {
-  transform: translateX(0.1em);
-}
-
-.cssbuttonsIoButton:active .icon {
-  transform: scale(0.95);
+.icon {
+  @include respond(phone) {
+    width: 15px;
+  }
 }

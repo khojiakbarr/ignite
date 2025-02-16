@@ -35,7 +35,7 @@ $base: 16;
   }
 
   @include respond(phone) {
-    background-size: 100% 100%;
+    background-size: 150% 100%;
     background-position: center top 72px;
     min-height: 50vh;
   }
@@ -54,7 +54,7 @@ $base: 16;
   }
 
   @include respond(phone) {
-    height: 50vh;
+    height: 56vh;
   }
 }
 
@@ -63,8 +63,14 @@ $base: 16;
   font-size: 86px;
   line-height: 105%;
   max-width: 500px;
+  text-transform: uppercase;
 
+  @include respond(tabler){
+    font-size: 40px;
+    max-width: 450px;
+  }
   @include respond(phone) {
+    max-width: 300px;
     font-size: 44px;
   }
 }
