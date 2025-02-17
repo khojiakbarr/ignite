@@ -33,7 +33,7 @@ const AboutUs = () => {
             className={styles.info}
             data-scroll-opacity
             style={{
-              maxWidth: locale && "850px",
+              maxWidth: locale==='uz' && "850px",
               opacity: 0.2,
               transition: "opacity 1s ease",
             }}
