@@ -7,7 +7,11 @@ import Image from "next/image";
 // import icon from "../../../public/brend_icons/Alpha_Distribution.png";
 const TrustCard = ({ image }) => {
   return (
-    <div className={styles.card}>
+    <div
+      className={styles.card}
+      data-scroll-opacity
+      style={{ opacity: 0.2, transition: "opacity 1s ease" }}
+    >
       <div className={styles.imageContainer}>
         <Image
           src={image}

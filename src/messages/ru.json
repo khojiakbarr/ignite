@@ -104,6 +104,8 @@
   },
 
   "footer": {
+    "centerTitle": "телефоны",
+    "commercial": "коммерческое предложение",
     "title": "Перестань <span>мечтать</span> начни <span>действовать</span>",
     "lists": [
       { "id": "about", "text": "о нас" },

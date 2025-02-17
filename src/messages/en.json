@@ -1,12 +1,123 @@
 {
   "header": {
-    "aboutus": "about us",
-    "solutions": "solutions",
-    "projects": "projects",
-    "home": "home",
-    "contacts": "contacts",
-    "clients": "clients",
-    "commercial": "commercial offer"
+    "items": [
+      { "id": "about", "text": "About Us" },
+      { "id": "solutions", "text": "Solutions" },
+      { "id": "trust", "text": "Clients" }
+    ],
+    "contact": "Contacts",
+    "commercial": "Commercial Offer"
+  },
+
+  "hero": {
+    "title": "<strong>Boundaries?</strong>\nWe erase them\n<strong>completely</strong>",
+    "info": "Ignite – a full-cycle advertising agency",
+    "btn": "Submit a Request"
+  },
+  "employment": {
+    "title": "What We Do",
+    "info": "We transform complex marketing technologies",
+    "item": "into <span>business solutions that save your time, money, and reduce stress</span>"
+  },
+  "about": {
+    "title": "About Us",
+    "info": "Who we are and how we <span>bring</span>\n  your ideas\n <span>to life</span>",
+    "wrapperTitle": "Ignite Media — your reliable business growth partner!",
+    "wrapperInfo": "We provide professional solutions for all B2B sectors, helping companies achieve their goals and grow effectively. Our experience spans a wide range of industries, including cooperation with the public sector.",
+    "wrapperInfo_2": "We are ready to guide you in implementing large-scale projects, optimizing processes, and creating innovative solutions. With us, you will become stronger, and your results more stable!"
+  },
+  "solutons": {
+    "title": "Solutions",
+    "info": "From strategy to implementation of your ideas",
+    "cards": [
+      {
+        "stroke": "#1E6DF0",
+        "imageUrl": "/bg_card_reklama.png",
+        "title": "Targeted Advertising",
+        "description": "Attracting customers through Instagram and Facebook"
+      },
+      {
+        "stroke": "#F98DFF",
+        "imageUrl": "/bg_card_botov.png",
+        "title": "Chatbot Development",
+        "description": "Creating a sales funnel or an information channel in Telegram and WhatsApp"
+      },
+      {
+        "stroke": "#65FF6A",
+        "imageUrl": "/bg_card_marketing.png",
+        "title": "Comprehensive Marketing",
+        "description": "A combination of various services to help your business increase sales and profit"
+      },
+      {
+        "stroke": "#FF53A3",
+        "imageUrl": "/bg_card_magazin.png",
+        "title": "Website or Online Store",
+        "description": "Creating any type of website for your products and services: multi-page sites, landing pages, online stores"
+      },
+      {
+        "stroke": "#FF924E",
+        "imageUrl": "/bg_card_SMM.png",
+        "title": "SMM Promotion",
+        "description": "Branding and promoting your products or services on Instagram, Facebook, VK, LinkedIn"
+      },
+      {
+        "stroke": "#FFD900",
+        "imageUrl": "/bg_card_reklama_2.png",
+        "title": "Contextual Advertising",
+        "description": "Setting up Google and Yandex ads to increase customer flow"
+      },
+      {
+        "stroke": "#E41502",
+        "imageUrl": "/bg_SEO.png",
+        "title": "SEO Promotion",
+        "description": "Organic promotion on Google and Yandex without ad budget expenses"
+      },
+      {
+        "stroke": "#00FFCC",
+        "imageUrl": "/bg_business.png",
+        "title": "Business Process Automation",
+        "description": "Building an independent sales process to track inventory and customers"
+      }
+    ]
+  },
+
+  "trust": {
+    "title": "Trusted By",
+    "trustCards": [
+      "/brend_icons/Alpha_Distribution.png",
+      "/brend_icons/ca_store.png",
+      "/brend_icons/Central_Asian_Distribution.png",
+      "/brend_icons/Global_Trade_Distribution.png",
+      "/brend_icons/gulfstream.png",
+      "/brend_icons/HP_Store.png",
+      "/brend_icons/Idea.png",
+      "/brend_icons/lenovo_Store.png",
+      "/brend_icons/Abris.png",
+      "/brend_icons/Mediapark.png",
+      "/brend_icons/sola.png",
+      "/brend_icons/solidworks.png",
+      "/brend_icons/Texnomart.png",
+      "/brend_icons/realme.png",
+      "/brend_icons/minestersva.png",
+      "/brend_icons/menerstersva_1.png"
+    ]
+  },
+
+  "footer": {
+    "centerTitle": "Phones",
+    "commercial": "Commercial Offer",
+    "title": "Stop <span>dreaming</span>, start <span>acting</span>",
+    "lists": [
+      { "id": "about", "text": "About Us" },
+      { "id": "solutions", "text": "Solutions" },
+      { "id": "trust", "text": "Clients" }
+    ]
+  },
+  "popup": {
+    "title": "Fill Out the Form",
+    "name": "Name",
+    "phone": "Phone",
+    "submit": "Submit",
+    "send_message": "Send Message"
   }
-  
 }

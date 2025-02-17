@@ -71,7 +71,7 @@ const Header = () => {
                   }
                 })}
               </ul>
-              <button className="uppercase" onClick={() => openModal(true)}>
+              <button className={styles.btn} onClick={() => openModal(true)}>
                 {t("contact")}
               </button>
             </div>
@@ -90,7 +90,12 @@ const Header = () => {
                   <motion.ul className={styles.listContainer}>
                     {items.map((item, i) => (
                       <motion.li key={i} variants={itemVariants}>
-                        <Link href={`#${item.id}`}>{item.text}</Link>
+                        <Link
+                          href={`#${item.id}`}
+                          onClick={() => setIsMenu(false)}
+                        >
+                          {item.text}
+                        </Link>
                       </motion.li>
                     ))}
                   </motion.ul>
@@ -138,9 +143,7 @@ const Header = () => {
             data-scroll-position="top"
           >
             <LocaleSwitcher />
-            <Link href={"#коммерческое предложение"}>
-              <LinerBtn>коммерческое предложение</LinerBtn>
-            </Link>
+            <LinerBtn>{t("commercial")}</LinerBtn>
           </div>
         </nav>
       </div>

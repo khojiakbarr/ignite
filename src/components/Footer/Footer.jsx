@@ -4,10 +4,12 @@ import { Link } from "@/i18n/routing";
 import Image from "next/image";
 import logo from "../../assets/logo.svg";
 import LinerBtn from "../LinerBtn/LinerBtn";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 const Footer = () => {
+  const locale = useLocale();
   const t = useTranslations("footer");
   const lists = t.raw("lists");
+  console.log(locale);
 
   return (
     <section className={styles.footer}>
@@ -19,18 +21,24 @@ const Footer = () => {
                 <Image src={logo} fill loading="lazy" alt="logo" />
               </div>
             </Link>
-            <h6 className={styles.title}>
+            <h6
+              className={`${styles.title} ${locale === "en" && "w-[300px]"}`}
+              data-scroll-opacity
+              style={{ opacity: 0.2, transition: "opacity 1s ease" }}
+            >
               {t.rich("title", {
                 span: (chunks) => <span className="font-bold">{chunks}</span>,
               })}
-              {/* Перестань <span className="font-bold">мечтать</span>, <br /> начни{" "}
-              <span className="font-bold">действовать</span> */}
             </h6>
-            <LinerBtn>Коммерческое предложение</LinerBtn>
+            <LinerBtn>{t("commercial")}</LinerBtn>
           </div>
           <div className={styles.center}>
-            <div className={styles.telContainer}>
-              <p className={styles.centerTitle}>телефоны</p>
+            <div
+              className={styles.telContainer}
+              data-scroll-opacity
+              style={{ opacity: 0.2, transition: "opacity 1s ease" }}
+            >
+              <p className={styles.centerTitle}>{t("centerTitle")}</p>
               <p className={styles.tel}>
                 <Link href={"tel:+998903703322"}>+998 90 370 33 22</Link>
               </p>
@@ -38,7 +46,11 @@ const Footer = () => {
                 <Link href={"tel:+998909000156"}>+998 90 900 01 56</Link>
               </p>
             </div>
-            <ul className={styles.centerList}>
+            <ul
+              className={styles.centerList}
+              data-scroll-opacity
+              style={{ opacity: 0.2, transition: "opacity 1s ease" }}
+            >
               <li className="underline">
                 <Link href={"#"}>telegram</Link>
               </li>
@@ -50,7 +62,11 @@ const Footer = () => {
               </li>
             </ul>
           </div>
-          <div className={styles.rightSide}>
+          <div
+            className={styles.rightSide}
+            data-scroll-opacity
+            style={{ opacity: 0.2, transition: "opacity 1s ease" }}
+          >
             <ul className={styles.centerList}>
               {lists.map((item, i) => (
                 <li key={i}>

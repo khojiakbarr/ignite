@@ -37,6 +37,11 @@ $base: 16;
   color: var(--bg-color);
   padding: px-to-rem(18);
   background-color: #fff;
+  transition: all 0.4s ease;
+
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.75);
+  }
 
   @include respond(tablet) {
     font-size: px-to-rem(14);

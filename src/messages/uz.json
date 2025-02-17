@@ -1,11 +1,123 @@
 {
   "header": {
-    "aboutus": "biz haqimizda",
-    "solutions": "yechimlar",
-    "projects": "loyihalar",
-    "home": "bosh sahifa",
-    "contacts": "aloqalar",
-    "clients": "mijozlar",
-    "commercial": "tijorat taklifi"
+    "items": [
+      { "id": "about", "text": "Biz haqimizda" },
+      { "id": "solutions", "text": "Yechimlar" },
+      { "id": "trust", "text": "Mijozlar" }
+    ],
+    "contact": "Aloqa",
+    "commercial": "Tijorat taklifi"
+  },
+
+  "hero": {
+    "title": "<strong>Chegaralar?</strong>\nBiz ularni\n<strong>yo‘q qilamiz</strong>",
+    "info": "Ignite – to‘liq xizmat ko‘rsatuvchi reklama agentligi",
+    "btn": "So‘rov qoldirish"
+  },
+  "employment": {
+    "title": "Biz nima qilamiz",
+    "info": "Murakkab marketing texnologiyalarini o‘zgartiramiz",
+    "item": "<span>Vaqtingiz, pulingizni tejaydigan va stressni kamaytiradigan biznes-yechimlarga</span> aylantiramiz"
+  },
+  "about": {
+    "title": "Biz haqimizda",
+    "info": "Biz kim va qanday qilib\n<span>g‘oyalaringizni</span>\n <span>haqiqatga aylantiramiz</span>",
+    "wrapperTitle": "Ignite Media — biznesingizning ishonchli hamkori!",
+    "wrapperInfo": "Biz barcha B2B yo‘nalishlarida professional yechimlarni taqdim etamiz, kompaniyalarga maqsadlariga erishishga va rivojlanishga yordam beramiz. Tajribamiz davlat sektori bilan hamkorlikni ham o‘z ichiga oladi.",
+    "wrapperInfo_2": "Biz sizga yirik loyihalarni amalga oshirish, jarayonlarni optimallashtirish va innovatsion yechimlar yaratishda yo‘lboshchi bo‘lishga tayyormiz. Biz bilan siz yanada kuchliroq bo‘lasiz, natijalaringiz esa barqaror bo‘ladi!"
+  },
+  "solutons": {
+    "title": "Yechimlar",
+    "info": "Strategiyadan tortib g‘oyalaringizni amalga oshirishgacha",
+    "cards": [
+      {
+        "stroke": "#1E6DF0",
+        "imageUrl": "/bg_card_reklama.png",
+        "title": "Maqsadli reklama",
+        "description": "Instagram va Facebook orqali mijozlarni jalb qilish"
+      },
+      {
+        "stroke": "#F98DFF",
+        "imageUrl": "/bg_card_botov.png",
+        "title": "Chatbot ishlab chiqish",
+        "description": "Telegram va WhatsApp’da savdo voronkasi yoki axborot kanalini yaratish"
+      },
+      {
+        "stroke": "#65FF6A",
+        "imageUrl": "/bg_card_marketing.png",
+        "title": "Kompleks marketing",
+        "description": "Savdo va foydani oshirish uchun turli xizmatlar kombinatsiyasi"
+      },
+      {
+        "stroke": "#FF53A3",
+        "imageUrl": "/bg_card_magazin.png",
+        "title": "Veb-sayt yoki internet-do‘kon",
+        "description": "Mahsulot va xizmatlaringiz uchun har qanday turdagi sayt yaratish: ko‘p sahifali sayt, landing, internet-do‘kon"
+      },
+      {
+        "stroke": "#FF924E",
+        "imageUrl": "/bg_card_SMM.png",
+        "title": "SMM targ‘iboti",
+        "description": "Instagram, Facebook, VK, LinkedIn platformalarida brending va mahsulotlarni targ‘ib qilish"
+      },
+      {
+        "stroke": "#FFD900",
+        "imageUrl": "/bg_card_reklama_2.png",
+        "title": "Kontekstli reklama",
+        "description": "Google va Yandex reklamalarini sozlash orqali mijozlar oqimini oshirish"
+      },
+      {
+        "stroke": "#E41502",
+        "imageUrl": "/bg_SEO.png",
+        "title": "SEO targ‘iboti",
+        "description": "Google va Yandex’da reklama budjetisiz organik targ‘ibot"
+      },
+      {
+        "stroke": "#00FFCC",
+        "imageUrl": "/bg_business.png",
+        "title": "Biznes jarayonlarini avtomatlashtirish",
+        "description": "Mijoz va mahsulotlarni kuzatish uchun mustaqil savdo jarayonini yaratish"
+      }
+    ]
+  },
+
+  "trust": {
+    "title": "Bizga ishonishadi",
+    "trustCards": [
+      "/brend_icons/Alpha_Distribution.png",
+      "/brend_icons/ca_store.png",
+      "/brend_icons/Central_Asian_Distribution.png",
+      "/brend_icons/Global_Trade_Distribution.png",
+      "/brend_icons/gulfstream.png",
+      "/brend_icons/HP_Store.png",
+      "/brend_icons/Idea.png",
+      "/brend_icons/lenovo_Store.png",
+      "/brend_icons/Abris.png",
+      "/brend_icons/Mediapark.png",
+      "/brend_icons/sola.png",
+      "/brend_icons/solidworks.png",
+      "/brend_icons/Texnomart.png",
+      "/brend_icons/realme.png",
+      "/brend_icons/minestersva.png",
+      "/brend_icons/menerstersva_1.png"
+    ]
+  },
+
+  "footer": {
+    "centerTitle": "Telefonlar",
+    "commercial": "Tijorat taklifi",
+    "title": "Orzu qilishni <span>to‘xtat</span>, harakatni <span>boshlash</span>",
+    "lists": [
+      { "id": "about", "text": "Biz haqimizda" },
+      { "id": "solutions", "text": "Yechimlar" },
+      { "id": "trust", "text": "Mijozlar" }
+    ]
+  },
+  "popup": {
+    "title": "Shaklni to‘ldiring",
+    "name": "Ism",
+    "phone": "Telefon",
+    "submit": "Yuborish",
+    "send_message": "Xabar yuborish"
   }
 }

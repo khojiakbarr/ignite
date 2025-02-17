@@ -16,12 +16,16 @@ function LocomotiveScrollProvider({ children }) {
           locomotiveScroll = new LocomotiveScrollModule.default({
             el: scrollRef.current,
             smooth: true,
-            lerp: 0.1, // Maxsus LERP effektni qo'llash
+            lerp: 0.1,
           });
+
           // Scroll eventni boshqarish
           locomotiveScroll.on("scroll", (obj) => {
             const lerpElements =
               document.querySelectorAll("[data-scroll-lerp]");
+            const opacityElements = document.querySelectorAll(
+              "[data-scroll-opacity]"
+            );
 
             lerpElements.forEach((el) => {
               const lerpValue =
@@ -32,20 +36,30 @@ function LocomotiveScrollProvider({ children }) {
               const scrollY = obj.scroll.y;
               const targetY = scrollY * lerpValue;
 
-              // Kechikish bilan transformni qo'llash
               setTimeout(() => {
                 el.style.transform = `translateY(${targetY}px)`;
-              }, delayValue * 50); // Kechikishni millisekundga o'girish
+              }, delayValue * 50);
+            });
+
+            // Opacity o'zgarishi
+            opacityElements.forEach((el) => {
+              const offsetTop = el.getBoundingClientRect().top + window.scrollY;
+              const startFade = offsetTop - window.innerHeight * 0.8; // 80% ekranda ko‘ringanda boshlanadi
+              const endFade = offsetTop; // Element ekranga to‘liq chiqqanda tugaydi
+
+              const opacity = Math.min(
+                Math.max((obj.scroll.y - startFade) / (endFade - startFade), 0),
+                1
+              );
+              el.style.opacity = opacity;
             });
           });
 
           document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
             anchor.addEventListener("click", (e) => {
-              e.preventDefault(); // Brauzerning odatiy harakatini to‘xtatish
-
-              const targetId = anchor.getAttribute("href").substring(1); // ID ni olish
+              e.preventDefault();
+              const targetId = anchor.getAttribute("href").substring(1);
               const targetElement = document.getElementById(targetId);
-
               if (targetElement && locomotiveScroll) {
                 locomotiveScroll.scrollTo(targetElement);
               }
@@ -63,9 +77,9 @@ function LocomotiveScrollProvider({ children }) {
   }, []);
 
   return (
-    <div ref={scrollRef} data-scroll-container>
+    <main ref={scrollRef} data-scroll-container>
       {children}
-    </div>
+    </main>
   );
 }
 

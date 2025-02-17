@@ -12,11 +12,14 @@ const SolutionCard = ({
   return (
     <div
       className={styles.card}
+      data-scroll-opacity
       style={{
         border: `1px solid ${data.stroke}`,
         backgroundImage: `url(${data.imageUrl})`,
         backgroundSize: "cover",
         backgroundPosition: "center",
+        opacity: 0.2,
+        transition: "opacity 1s ease",
       }}
     >
       <div className={styles.content}>

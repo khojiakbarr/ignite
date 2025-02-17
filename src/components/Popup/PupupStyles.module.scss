@@ -1,3 +1,29 @@
+@use "sass:math";
+$base: 16;
+@function px-to-rem($px) {
+  @return math.div($px, $base) * 1rem;
+}
+
+@mixin respond($breakpoint) {
+  @if $breakpoint == phone {
+    @media only screen and (max-width: px-to-rem(768)) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == tablet {
+    @media only screen and (max-width: px-to-rem(1024)) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == desktop {
+    @media only screen and (max-width: px-to-rem(1440)) {
+      @content;
+    }
+  }
+}
+
 .modalContainer {
   position: absolute;
   top: 0;
@@ -43,4 +69,41 @@
   background-color: #fff;
   width: 100%;
   background-color: var(--bg-color);
+}
+
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: px-to-rem(5);
+  font-weight: 700;
+  font-size: 10px;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+  border-radius: px-to-rem(8);
+  color: var(--bg-color);
+  padding: px-to-rem(10);
+  background-color: #fff;
+  transition: all 0.4s ease;
+
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.75);
+  }
+
+  @include respond(tablet) {
+    font-size: px-to-rem(14);
+    padding: px-to-rem(15);
+  }
+
+  @include respond(phone) {
+    font-size: px-to-rem(10);
+    padding: px-to-rem(10);
+    gap: px-to-rem(8);
+  }
+}
+
+.icon {
+  @include respond(phone) {
+    width: 15px;
+  }
 }

@@ -5,9 +5,10 @@ import styles from "./Hero.module.scss";
 import RequestBtn from "../RequestBtn/RequestBtn";
 import Popup from "../Popup/Popup";
 import { AnimatePresence } from "framer-motion";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 
 const Hero = () => {
+  const locale = useLocale();
   const t = useTranslations("hero");
   const [isOpen, setIsOpen] = useState(false);
 
@@ -46,7 +47,8 @@ const Hero = () => {
       <div className="container">
         <div className={styles.wrapper}>
           <h1
-            className={styles.title}
+            className={`${styles.title}`}
+            style={{ maxWidth: locale === "en" && "750px" }}
             data-scroll
             data-scroll-direction="vertical"
             data-scroll-speed="-1"
@@ -66,15 +68,9 @@ const Hero = () => {
           >
             {t("info")}
           </p>
-          <RequestBtn
-            onClick={() => setIsOpen(true)}
-            data-scroll
-            data-scroll-direction="vertical"
-            data-scroll-speed="-2"
-            data-scroll-position="top"
-          >
-            {t("btn")}
-          </RequestBtn>
+          <div data-scroll data-scroll-speed="-2" data-scroll-position="top">
+            <RequestBtn onClick={() => setIsOpen(true)}>{t("btn")}</RequestBtn>
+          </div>
           <AnimatePresence>
             {isOpen && <Popup setIsOpen={setIsOpen} />}
           </AnimatePresence>
@@ -83,5 +79,4 @@ const Hero = () => {
     </section>
   );
 };
-
 export default Hero;

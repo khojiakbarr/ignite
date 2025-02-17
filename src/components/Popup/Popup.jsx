@@ -1,7 +1,7 @@
 "use client";
 
 import styles from "./PupupStyles.module.scss";
-import { X } from "lucide-react";
+import { ArrowRight, X } from "lucide-react";
 import { motion } from "framer-motion";
 import { modalContentVariants, modalVariants } from "@/motions";
 import { useTranslations } from "next-intl";
@@ -64,7 +64,10 @@ const Popup = ({ setIsOpen }) => {
         </div>
 
         <div className="flex justify-end mt-3">
-          <button>{t("send_message")}</button>
+          <button className={styles.btn}>
+            {t("send_message")}
+            <ArrowRight />
+          </button>
         </div>
       </motion.form>
     </motion.div>

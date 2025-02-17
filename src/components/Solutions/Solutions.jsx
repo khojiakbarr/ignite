@@ -21,8 +21,18 @@ const Solutions = () => {
           </div>
           <h4 className={styles.title}>{t("title")}</h4>
         </div>
-        <p className={styles.info}>{t("info")}</p>
-        <div className={styles.cardsGrid}>
+        <p
+          className={styles.info}
+          data-scroll-opacity
+          style={{ opacity: 0.2, transition: "opacity 1s ease" }}
+        >
+          {t("info")}
+        </p>
+        <div
+          className={styles.cardsGrid}
+          data-scroll-opacity
+          style={{ opacity: 0.2, transition: "opacity 1s ease" }}
+        >
           {cards.map((card, i) => (
             <SolutionCard key={i} data={card} />
           ))}

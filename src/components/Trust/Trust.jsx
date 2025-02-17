@@ -14,7 +14,11 @@ const Trust = () => {
         <span className={styles.line}></span>
       </div>
       <div className="container">
-        <div className={styles.cardWrapper}>
+        <div
+          className={styles.cardWrapper}
+          data-scroll-opacity
+          style={{ opacity: 0.2, transition: "opacity 1s ease" }}
+        >
           {trust.trustCards.map((image, i) => (
             <TrustCard key={i} image={image} />
           ))}

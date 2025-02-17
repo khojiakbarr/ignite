@@ -9,7 +9,7 @@ import Trust from "@/components/Trust/Trust";
 
 export default function Home() {
   return (
-    <main>
+    <>
       <Header />
       <Hero />
       <Employment />
@@ -17,6 +17,6 @@ export default function Home() {
       <Solutions />
       <Trust />
       <Footer />
-    </main>
+    </>
   );
 }

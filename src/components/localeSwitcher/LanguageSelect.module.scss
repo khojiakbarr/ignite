@@ -42,6 +42,7 @@ $base: 16;
   justify-content: space-between;
   align-items: center;
   transition: all 0.4s ease;
+  text-transform: uppercase;
   // &:hover {
   //   background-color: var(--brand-color);
   //   color: #fff;
@@ -87,7 +88,6 @@ $base: 16;
   }
 }
 
-// .option:hover {
-//   background-color: var(--brand-color);
-//   color: #fff;
-// }
+.option:hover {
+  background-color: #100c3d;
+}
