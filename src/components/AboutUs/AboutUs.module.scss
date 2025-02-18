@@ -127,17 +127,20 @@ $base: 16;
   font-weight: 700;
   font-size: px-to-rem(20);
   max-width: 430px;
+
   @include respond(tablet) {
     font-size: px-to-rem(19);
   }
   @include respond(phone) {
     font-size: px-to-rem(19);
+
     max-width: 100%;
   }
 }
 
 .wrapperInfo {
   font-size: px-to-rem(20);
+
   @include respond(tablet) {
     font-size: px-to-rem(16);
   }

@@ -10,7 +10,11 @@ const Employment = () => {
     <section className={styles.employment}>
       <div className="container">
         <div className={styles.wrapper}>
-          <div className="flex justify-center items-center gap-2 mb-5">
+          <div
+            className="flex justify-center items-center gap-2 mb-5"
+            // data-aos="fade-up"
+            // data-aos-duration="400"
+          >
             <div className={styles.imageContainer}>
               <Image src={bottomIcon} fill alt="icon_bottom" loading="lazy" />
             </div>
@@ -22,6 +26,8 @@ const Employment = () => {
             data-scroll-direction="vertical"
             data-scroll-speed="-0.3"
             data-scroll-position="top"
+            // data-aos="fade-up"
+            // data-aos-duration="600"
           >
             {t("info")}
           </p>
@@ -31,6 +37,8 @@ const Employment = () => {
             data-scroll-direction="vertical"
             data-scroll-speed="-0.4"
             data-scroll-position="top"
+            // data-aos="fade-up"
+            // data-aos-duration="800"
           >
             {t.rich("item", {
               span: (chunks) => <span className="font-bold">{chunks}</span>,

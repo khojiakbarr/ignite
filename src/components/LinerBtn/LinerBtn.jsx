@@ -3,7 +3,7 @@
 import React from "react";
 import styles from "./LinerBtn.module.scss";
 
-const LinerBtn = ({ children }, props) => {
+const LinerBtn = (props) => {
   const downloadFile = async () => {
     if (typeof window !== "undefined") {
       const response = await fetch("/api/download");
@@ -19,7 +19,7 @@ const LinerBtn = ({ children }, props) => {
   return (
     <div className={styles.container}>
       <button {...props} className={styles.btn} onClick={() => downloadFile()}>
-        {children}
+        {props.children}
       </button>
     </div>
   );

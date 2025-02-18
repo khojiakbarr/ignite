@@ -18,6 +18,9 @@
     max-width: 500px;
   }
 }
+html {
+  scroll-behavior: smooth;
+}
 
 body {
   background-color: var(--bg-color);
@@ -25,7 +28,7 @@ body {
 }
 
 ::-webkit-scrollbar {
-  width: 0px;
+  width: 10px;
 }
 
 ::-webkit-scrollbar-track-piece {

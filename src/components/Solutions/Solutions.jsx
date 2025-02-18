@@ -15,7 +15,11 @@ const Solutions = () => {
   return (
     <section className={styles.solutions} id="solutions">
       <div className="container">
-        <div className="flex justify-center items-center gap-2 mb-5 max-md:mb-0">
+        <div
+          className="flex justify-center items-center gap-2 mb-5 max-md:mb-0"
+          // data-aos="fade-up"
+          // data-aos-duration="200"
+        >
           <div className={styles.imageContainer}>
             <Image src={bottomIcon} fill alt="icon_bottom" loading="lazy" />
           </div>
@@ -23,18 +27,14 @@ const Solutions = () => {
         </div>
         <p
           className={styles.info}
-          data-scroll-opacity
-          style={{ opacity: 0.2, transition: "opacity 1s ease" }}
+          // data-aos="fade-up"
+          // data-aos-duration="400"
         >
           {t("info")}
         </p>
-        <div
-          className={styles.cardsGrid}
-          data-scroll-opacity
-          style={{ opacity: 0.2, transition: "opacity 1s ease" }}
-        >
+        <div className={styles.cardsGrid}>
           {cards.map((card, i) => (
-            <SolutionCard key={i} data={card} />
+            <SolutionCard key={i} i={i} data={card} />
           ))}
         </div>
       </div>

@@ -9,6 +9,8 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@studio-freight/lenis": "^1.0.42",
+    "aos": "^2.3.4",
     "framer-motion": "^12.4.2",
     "locomotive-scroll": "^4.1.4",
     "lucide-react": "^0.475.0",

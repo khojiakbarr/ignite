@@ -53,6 +53,8 @@ const Hero = () => {
             data-scroll-direction="vertical"
             data-scroll-speed="-1"
             data-scroll-position="top"
+            // data-aos="fade-right"
+            // data-aos-duration="400"
           >
             {t.rich("title", {
               strong: (chunks) => <strong>{chunks}</strong>,
@@ -65,10 +67,18 @@ const Hero = () => {
             data-scroll-direction="vertical"
             data-scroll-speed="-1.5"
             data-scroll-position="top"
+            // data-aos="fade-right"
+            // data-aos-duration="600"
           >
             {t("info")}
           </p>
-          <div data-scroll data-scroll-speed="-2" data-scroll-position="top">
+          <div
+            data-scroll
+            data-scroll-speed="-2"
+            data-scroll-position="top"
+            // data-aos="fade-right"
+            // data-aos-duration="800"
+          >
             <RequestBtn onClick={() => setIsOpen(true)}>{t("btn")}</RequestBtn>
           </div>
           <AnimatePresence>

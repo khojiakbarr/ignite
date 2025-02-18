@@ -1,85 +1,66 @@
 "use client";
 
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import "locomotive-scroll/dist/locomotive-scroll.css";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 function LocomotiveScrollProvider({ children }) {
   const scrollRef = useRef(null);
+  const [locomotiveScroll, setLocomotiveScroll] = useState(null);
 
   useEffect(() => {
-    let locomotiveScroll;
+    if (window.innerWidth < 768) return;
 
-    if (window.innerWidth >= 768) {
-      const initScroll = async () => {
-        if (typeof window !== "undefined" && scrollRef.current) {
-          const LocomotiveScrollModule = await import("locomotive-scroll");
-          locomotiveScroll = new LocomotiveScrollModule.default({
-            el: scrollRef.current,
-            smooth: true,
-            lerp: 0.1,
+    const initScroll = async () => {
+      if (typeof window !== "undefined" && scrollRef.current) {
+        const { default: LocomotiveScroll } = await import("locomotive-scroll");
+        const scrollInstance = new LocomotiveScroll({
+          el: scrollRef.current,
+          smooth: true,
+          lerp: 0.1,
+        });
+
+        setLocomotiveScroll(scrollInstance);
+
+        setTimeout(() => {
+          AOS.init({
+            duration: 600, // Animatsiya tezligi
+            once: true, // Har safar scroll bo‘lganda animatsiya qayta ishlaydi
+            offset: 100, // Element ekranning 100px qismiga kelganda animatsiya boshlanadi
           });
+          AOS.refresh();
+        }, 100);
 
-          // Scroll eventni boshqarish
-          locomotiveScroll.on("scroll", (obj) => {
-            const lerpElements =
-              document.querySelectorAll("[data-scroll-lerp]");
-            const opacityElements = document.querySelectorAll(
-              "[data-scroll-opacity]"
-            );
+        // ✅ Locomotive Scroll harakatini AOS bilan bog‘lash
+        scrollInstance.on("scroll", () => {
+          AOS.refresh();
+        });
 
-            lerpElements.forEach((el) => {
-              const lerpValue =
-                parseFloat(el.getAttribute("data-scroll-lerp")) || 0.1;
-              const delayValue =
-                parseFloat(el.getAttribute("data-scroll-delay")) || 0;
-
-              const scrollY = obj.scroll.y;
-              const targetY = scrollY * lerpValue;
-
-              setTimeout(() => {
-                el.style.transform = `translateY(${targetY}px)`;
-              }, delayValue * 50);
-            });
-
-            // Opacity o'zgarishi
-            opacityElements.forEach((el) => {
-              const offsetTop = el.getBoundingClientRect().top + window.scrollY;
-              const startFade = offsetTop - window.innerHeight * 0.8; // 80% ekranda ko‘ringanda boshlanadi
-              const endFade = offsetTop; // Element ekranga to‘liq chiqqanda tugaydi
-
-              const opacity = Math.min(
-                Math.max((obj.scroll.y - startFade) / (endFade - startFade), 0),
-                1
-              );
-              el.style.opacity = opacity;
-            });
+        document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+          anchor.addEventListener("click", (e) => {
+            e.preventDefault();
+            const targetId = anchor.getAttribute("href").substring(1);
+            const targetElement = document.getElementById(targetId);
+            if (targetElement) {
+              scrollInstance.scrollTo(targetElement);
+            }
           });
+        });
+      }
+    };
 
-          document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-            anchor.addEventListener("click", (e) => {
-              e.preventDefault();
-              const targetId = anchor.getAttribute("href").substring(1);
-              const targetElement = document.getElementById(targetId);
-              if (targetElement && locomotiveScroll) {
-                locomotiveScroll.scrollTo(targetElement);
-              }
-            });
-          });
-        }
-      };
+    initScroll();
 
-      initScroll();
-
-      return () => {
-        if (locomotiveScroll) locomotiveScroll.destroy();
-      };
-    }
+    return () => {
+      locomotiveScroll?.destroy();
+    };
   }, []);
 
   return (
-    <main ref={scrollRef} data-scroll-container>
+    <div ref={scrollRef} data-scroll-container>
       {children}
-    </main>
+    </div>
   );
 }
 

@@ -10,17 +10,18 @@ const Trust = () => {
     <section className={styles.trust} id="trust">
       <div className={styles.titleContainer}>
         <span className={styles.line}></span>
-        <h5 className={styles.title}>{trust.title}</h5>
+        <h5 className={styles.title}
+        //  data-aos="zoom-in"
+          // data-aos-duration="500"
+          >
+          {trust.title}
+        </h5>
         <span className={styles.line}></span>
       </div>
       <div className="container">
-        <div
-          className={styles.cardWrapper}
-          data-scroll-opacity
-          style={{ opacity: 0.2, transition: "opacity 1s ease" }}
-        >
+        <div className={styles.cardWrapper}>
           {trust.trustCards.map((image, i) => (
-            <TrustCard key={i} image={image} />
+            <TrustCard key={i} i={i} image={image} />
           ))}
         </div>
       </div>

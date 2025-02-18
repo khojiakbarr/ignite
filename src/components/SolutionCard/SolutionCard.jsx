@@ -8,19 +8,19 @@ const SolutionCard = ({
     title: "title",
     description: "description",
   },
+  i,
 }) => {
   return (
     <div
       className={styles.card}
-      data-scroll-opacity
       style={{
         border: `1px solid ${data.stroke}`,
         backgroundImage: `url(${data.imageUrl})`,
         backgroundSize: "cover",
         backgroundPosition: "center",
-        opacity: 0.2,
-        transition: "opacity 1s ease",
       }}
+      // data-aos="flip-left"
+      // data-aos-duration={`1${i}00`}
     >
       <div className={styles.content}>
         <h2 className={styles.title}>{data.title}</h2>
