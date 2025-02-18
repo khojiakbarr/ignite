@@ -66,6 +66,7 @@ const Hero = () => {
             data-scroll
             data-scroll-direction="vertical"
             data-scroll-speed="-1.5"
+            
             data-scroll-position="top"
             // data-aos="fade-right"
             // data-aos-duration="600"
