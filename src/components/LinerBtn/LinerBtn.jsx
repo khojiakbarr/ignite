@@ -10,7 +10,7 @@ const LinerBtn = (props) => {
       const blob = await response.blob();
       const link = document.createElement("a");
       link.href = URL.createObjectURL(blob);
-      link.download = "Resume.pdf";
+      link.download = "Ignite Media - КП";
       document.body.appendChild(link);
       link.click();
       document.body.removeChild(link);
