@@ -84,7 +84,10 @@
   "trust": {
     "title": "Bizga ishonishadi",
     "trustCards": [
-      "/brend_icons/Alpha_Distribution.png",
+      "/brend_icons/minestersva.png",
+      "/brend_icons/menerstersva_1.png",
+      "/brend_icons/Abris.png",
+      "/brend_icons/sola.png",
       "/brend_icons/ca_store.png",
       "/brend_icons/Central_Asian_Distribution.png",
       "/brend_icons/Global_Trade_Distribution.png",
@@ -92,14 +95,11 @@
       "/brend_icons/HP_Store.png",
       "/brend_icons/Idea.png",
       "/brend_icons/lenovo_Store.png",
-      "/brend_icons/Abris.png",
       "/brend_icons/Mediapark.png",
-      "/brend_icons/sola.png",
       "/brend_icons/solidworks.png",
       "/brend_icons/Texnomart.png",
       "/brend_icons/realme.png",
-      "/brend_icons/minestersva.png",
-      "/brend_icons/menerstersva_1.png"
+      "/brend_icons/Alpha_Distribution.png"
     ]
   },
 

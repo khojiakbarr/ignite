@@ -35,7 +35,7 @@ const Footer = () => {
                 span: (chunks) => <span className="font-bold">{chunks}</span>,
               })}
             </h6>
-            <LinerBtn 
+            <LinerBtn
             // data-aos="zoom-in" data-oas-duration="800"
             >
               {t("commercial")}
@@ -71,13 +71,10 @@ const Footer = () => {
               // data-oas-duration="1000"
             >
               <li className="underline">
-                <Link href={"#"}>telegram</Link>
+                <Link href={"https://t.me/ignitemediauz"}>telegram</Link>
               </li>
               <li className="underline">
-                <Link href={"#"}>Instagram</Link>
-              </li>
-              <li className="underline">
-                <Link href={"#"}>Facebook</Link>
+                <Link href={"https://www.instagram.com/ignitemedia.uz/"}>Instagram</Link>
               </li>
             </ul>
           </div>
@@ -96,8 +93,7 @@ const Footer = () => {
           </div>
         </div>
         <div className={styles.footerLine}>
-          <p className={styles.copyright}>2025</p>{" "}
-          <p className={styles.copyright}>Ignite media ©</p>
+          <p className={styles.copyright}>2025</p> <p className={styles.copyright}>Ignite media ©</p>
         </div>
       </div>
     </section>
