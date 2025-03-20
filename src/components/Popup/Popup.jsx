@@ -23,7 +23,7 @@ const Popup = ({ setIsOpen }) => {
       <motion.form initial="hidden" animate="visible" exit="hidden" variants={modalContentVariants} className={styles.modal} onSubmit={submitForm}>
         <div className="flex justify-between">
           <h1 className={styles.title}>{t("title")}</h1>
-          <button onClick={() => setIsOpen(false)}>
+          <button onClick={() => setIsOpen(false)} type="button">
             <X />
           </button>
         </div>
