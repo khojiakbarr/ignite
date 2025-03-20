@@ -6,6 +6,7 @@ import "../globals.css";
 import { AOSInit } from "@/aos";
 // import SpeedLimitWrapper from "@/components/SpeedLimitScroll";
 import LocomotiveScrollProvider from "@/providers/Locomotivescroll";
+import { Toaster } from "react-hot-toast";
 
 const montserrat = localFont({
   src: "../../../public/fonts/Montserrat-VariableFont_wght.ttf",
@@ -15,6 +16,20 @@ const montserrat = localFont({
 export const metadata = {
   title: "Ignite",
   description: "рекламное агентство полного цикла",
+  // openGraph: {
+  //   title: "Ignite",
+  //   description: "рекламное агентство полного цикла",
+  //   url: "https://www.ignitemedia.ru",
+  //   type: "website",
+  //   images: [
+  //     {
+  //       url: "https://www.ignitemedia.ru/bg_header.png",
+  //       width: 1200,
+  //       height: 400,
+  //     },
+  //   ],
+  // },
+  
 };
 
 export function generateStaticParams() {
@@ -40,6 +55,7 @@ export default async function RootLayout({ children, params }) {
             {children}
             {/* </AOSInit> */}
             {/* </ReactLenis> */}
+            <Toaster />
           </LocomotiveScrollProvider>
         </body>
       </NextIntlClientProvider>
