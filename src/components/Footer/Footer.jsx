@@ -74,7 +74,7 @@ const Footer = () => {
                 <Link href={"https://t.me/ignitemediauz"}>telegram</Link>
               </li>
               <li className="underline">
-                <Link href={"https://www.instagram.com/ignitemedia.uz/"}>Instagram</Link>
+                <Link href={"https://www.instagram.com/ignitedigital.uz/"}>Instagram</Link>
               </li>
             </ul>
           </div>
